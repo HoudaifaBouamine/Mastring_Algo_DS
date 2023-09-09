@@ -10,10 +10,12 @@
 
         *{
             font-family: Arial, Helvetica, sans-serif;
-            margin:0px;
             padding:0px;
             text-decoration: none;
             box-sizing: border-box;
+            margin-left: 0px;
+            margin-right: 0px;
+            margin-top: 0px;
         }
 
         body{
@@ -106,17 +108,23 @@
 
          <h1>Login</h1>
             <div class="tb_input">
-                <input type="text"placeholder="Username">
+<%--                <input id="tb_UserName" type="text"placeholder="Username"/>--%>
+                <asp:TextBox ID="tb_UserName" placeholder="Username" runat="server"></asp:TextBox>
             </div>
             <div class="tb_input">
-                <input type="password" placeholder="Password">
+                <!-- <input id="tb_Password" type="password" placeholder="Password"/> -->
+                <asp:TextBox ID="tb_Password" placeholder="Password" runat="server" TextMode="Password"></asp:TextBox>
+
             </div>
-            <input type="submit" value="Login" class="btn_submit">
+               
+            <asp:Button ID="btn_Login" runat="server" Text="Login" class="btn_submit" OnClick="Button1_Click" />
 
             <div class="lbl_sign-up">
                 Don't have an account ?
-                </br>
+                 <br />
+
                 <a href="#">Sign up</a>
+
             </div>
 
         
